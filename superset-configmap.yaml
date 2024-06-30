@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: superset-database-config
+data:
+  superset_config.py: |
+    SQLALCHEMY_DATABASE_URI = 'clickhouse://<clickhouse-username>:<clickhouse-password>@<clickhouse-host>:9000/default'
